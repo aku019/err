@@ -10,12 +10,19 @@ import productRoutes from './routes/productRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
 import uploadRoutes from './routes/uploadRoutes.js'
+// import { createRequire } from 'module';
+// import { Console } from 'console'
+//  const require = createRequire(import.meta.url);
+
+// var cors = require('cors');
+// //app.use(cors());
 
 dotenv.config()
 
-//connectDB();
+connectDB();
 
 const app = express();
+// app.use(cors());
 
 if(process.env.NODE_ENV === 'developement'){
     app.use(morgan('dev'))
